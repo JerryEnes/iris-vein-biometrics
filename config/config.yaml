@@ -1,0 +1,31 @@
+app:
+  name: "iris-vein-vit-biometrics"
+  version: "1.0.0"
+  environment: "production"
+
+model:
+  name: "Vision Transformer"
+  embedding_size: 512
+  threshold: 0.85
+  image_size: 224
+
+database:
+  host: "db"
+  port: 5432
+  name: "biometrics"
+  user: "user"
+  password: "password"
+
+redis:
+  host: "redis"
+  port: 6379
+
+api:
+  host: "0.0.0.0"
+  port: 8000
+  workers: 4
+  debug: false
+
+mlflow:
+  tracking_uri: "http://mlflow:5000"
+  experiment_name: "iris-vein-vit"
